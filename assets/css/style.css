@@ -224,17 +224,17 @@ html {
   display: flex;
   justify-content: space-between;
 }
-.golden-bear__content .golden-bear__text {
+.golden-bear__content .golden-bear_text {
   width: 25vw;
 }
-.golden-bear__content .golden-bear__text .golden-bear__headline {
+.golden-bear__content .golden-bear_text .pgolden-bear__number {
+  font-family: "workSans-regular";
+  font-size: 1.2rem;
+}
+.golden-bear__content .golden-bear_text .golden-bear__headline {
   font-family: "workSans-bold";
   font-size: 5.2rem;
   margin: 2vh 0;
-}
-.golden-bear__content .golden-bear__text .golden-bear__number {
-  font-family: "workSans-regular";
-  font-size: 1.2rem;
 }
 .golden-bear__content .golden-bear__description {
   width: 45vw;
@@ -243,7 +243,7 @@ html {
   font-family: "workSans-regular";
   font-size: 1.8rem;
   line-height: 1.6;
-  width: 44rem;
+  max-width: 44rem;
 }
 .golden-bear__content .golden-bear__description .golden-bear__author {
   font-family: "workSans-regular";
@@ -269,8 +269,83 @@ html {
   position: absolute;
   top: 50vh;
   left: 60%;
-  width: 28%;
+  width: 30%;
   z-index: 1;
+}
+
+.poppy-bear {
+  position: relative;
+  overflow: hidden;
+}
+.poppy-bear__ring {
+  position: absolute;
+  width: 30%;
+  top: -12%;
+  right: -8%;
+  z-index: -1;
+  animation: rotatingRing 10s infinite linear;
+}
+@keyframes rotatingRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.poppy-bear__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 75vh 5vw 0 5vw;
+}
+.poppy-bear__content .poppy-bear__text {
+  width: 25vw;
+}
+.poppy-bear__content .poppy-bear__text .poppy-bear__number {
+  font-family: "workSans-regular";
+  font-size: 1.2rem;
+}
+.poppy-bear__content .poppy-bear__text .poppy-bear__headline {
+  font-family: "workSans-bold";
+  font-size: 5.2rem;
+  margin: 2vh 0;
+}
+.poppy-bear__content .poppy-bear__description {
+  width: 45vw;
+}
+.poppy-bear__content .poppy-bear__description .poppy-bear__paragraph {
+  font-family: "workSans-regular";
+  font-size: 1.8rem;
+  line-height: 1.6;
+  max-width: 44rem;
+}
+.poppy-bear__content .poppy-bear__description .poppy-bear__author {
+  font-family: "workSans-regular";
+  font-weight: 800;
+  margin-top: 1vh;
+  font-style: italic;
+  font-size: 1rem;
+}
+.poppy-bear__images {
+  margin: 15vh 0;
+  position: relative;
+  padding-left: 5vw;
+}
+.poppy-bear__images .poppy-bear__image {
+  display: block;
+  max-width: 100%;
+}
+.poppy-bear__images .poppy-bear__image--small {
+  width: 30%;
+  position: absolute;
+  op: 43vh;
+  left: 10%;
+  width: 30%;
+  z-index: 1;
+}
+.poppy-bear__images .poppy-bear__image--large {
+  width: 60%;
+  transform: translate(28vw, -15vh);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -264,39 +264,8 @@ html{
         display: flex;
         justify-content: space-between;
 
-        .golden-bear__text {
-            width: 25vw;
+        @include mixin.contentStyleGolden; 
 
-            .golden-bear__headline {
-                font-family: var.$extraBold; 
-                font-size: 5.2rem;
-                margin: 2vh 0;
-            }
-
-            .golden-bear__number {
-                font-family: var.$mainFont; 
-                font-size: 1.2rem;
-            }
-        }
-
-        .golden-bear__description {
-            width: 45vw;
-
-            .golden-bear__paragraph {
-                font-family: var.$mainFont; 
-                font-size: 1.8rem;
-                line-height: 1.6;
-                width:44rem;
-            }
-
-            .golden-bear__author {
-                font-family: var.$mainFont; 
-                font-weight: 800; 
-                margin-top: 1vh;
-                font-style: italic;
-                font-size: 1rem;
-            }
-        }
     }
 
     &__images {
@@ -317,7 +286,7 @@ html{
                 position: absolute; 
                 top: 50vh;
                 left: 60%;
-                width: 28%;
+                width: 30%;
                 z-index: 1; 
                 
             }
@@ -325,5 +294,64 @@ html{
     }
 }
 
+
+
+
+.poppy-bear {
+    position: relative;
+    overflow: hidden;
+    
+    &__ring {
+        position: absolute;
+        width: 30%;
+        top: -12%;
+        right: -8%;
+        z-index: -1; // Unter den anderen Elementen
+        animation: rotatingRing 10s infinite linear; // Rotation-Animation
+    }
+
+    @keyframes rotatingRing {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 75vh 5vw 0 5vw;
+
+        @include mixin.contentStylePoppy; 
+    }
+    &__images {
+        margin: 15vh 0;
+        position: relative; 
+        padding-left: 5vw;
+        
+        .poppy-bear__image {
+            display: block;
+            max-width: 100%;
+
+            &--small {
+                width: 30%;
+                position: absolute; 
+                op: 43vh;
+                left: 10%;
+                width: 30%;
+                z-index: 1; 
+            }
+            
+            &--large {
+                width: 60%;
+                transform: translate(28vw, -15vh);
+            }
+        }
+    }
+    
+    
+}
 
 

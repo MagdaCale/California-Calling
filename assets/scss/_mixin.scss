@@ -1,4 +1,4 @@
-@use "./variables.scss";
+@use "./variables.scss" as *;
 
 //Background Style Dark 
 
@@ -15,6 +15,78 @@
     font-size: 2rem; 
     margin-bottom: 2vh;
 }
+
+@mixin contentStyleGolden($textWidth: 25vw, $descWidth: 45vw) {
+    .golden-bear_text{
+        width: $textWidth;
+        .pgolden-bear__number{
+            font-family: $mainFont;
+            font-size: 1.2rem;
+        }
+        .golden-bear__headline{
+            font-family: $extraBold;
+            font-size: 5.2rem;
+            margin: 2vh 0;
+        }
+    }
+       
+    .golden-bear__description {
+        width: $descWidth;
+
+        .golden-bear__paragraph {
+            font-family: $mainFont;
+            font-size: 1.8rem;
+            line-height: 1.6;
+            max-width: 44rem; 
+        }
+        .golden-bear__author {
+            font-family: $mainFont;
+            font-weight: 800;
+            margin-top: 1vh;
+            font-style: italic;
+            font-size: 1rem;
+        }
+    }
+}
+
+@mixin contentStylePoppy($textWidth: 25vw, $descWidth: 45vw) {
+    .poppy-bear__text{
+        width: $textWidth;
+        .poppy-bear__number{
+            font-family: $mainFont;
+            font-size: 1.2rem;
+        }
+        .poppy-bear__headline{
+            font-family: $extraBold;
+            font-size: 5.2rem;
+            margin: 2vh 0;
+        }
+    }
+       
+    .poppy-bear__description {
+        width: $descWidth;
+
+        .poppy-bear__paragraph {
+            font-family: $mainFont;
+            font-size: 1.8rem;
+            line-height: 1.6;
+            max-width: 44rem; 
+        }
+
+        .poppy-bear__author {
+            font-family: $mainFont;
+            font-weight: 800;
+            margin-top: 1vh;
+            font-style: italic;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
+
+
 
 // Media Queries 
 // H2 Font Style 
