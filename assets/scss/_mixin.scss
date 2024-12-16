@@ -1,0 +1,31 @@
+@use "./variables.scss";
+
+//Background Style Dark 
+
+
+// H2 Font Style
+@mixin h2FontStyle {
+    font-family: $workSans-regular;
+    font-size: 6rem;
+}
+
+// Golden & Poppy Bear Section
+@mixin smallFontLarishNeue {
+    font-family: $workSans-regular;
+    font-size: 2rem; 
+    margin-bottom: 2vh;
+}
+
+// Media Queries 
+// H2 Font Style 
+// @mixin h2FontStyleMobile {
+//     font-family: $fontFamily;
+//     font-size: 4rem;
+// }
+
+// // headlineHeights 
+// @mixin headlineHeights {
+//     font-size: 4rem;
+//     line-height: 45px; 
+// }
+

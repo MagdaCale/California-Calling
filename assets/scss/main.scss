@@ -1,0 +1,329 @@
+/* ===== General Styles ===== */
+/* Import Variables */
+@use "./_mixin.scss";
+@use "./variables" as var;
+
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+html{
+    font-family: var.$mainFont;
+}
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+//!            KLASSEN              
+
+// Line Height Headlines
+.lineheightHeadlines {
+    line-height: 87px;
+}
+
+// RSVP Buttons
+.RSVPButton {
+    
+}
+
+// Hollow Font Style H1
+.hollowFont {
+    -webkit-text-stroke: 1px #fff ;
+    color: #000; 
+}
+
+// Line Height Text Main Image Section
+.lineheightText {
+    line-height: 35px;
+}
+
+
+
+
+/* ===== Header Styles ===== */
+.header {
+    height: 100vh;
+    background-color: var(--primary-color); 
+    color: var(--secondary-color);
+    text-align: center;
+
+    &__line {
+        width: 100vw;
+        height: 25vh;
+    }
+
+    &__content {
+        margin: 8vh 0;
+
+        &-subtitle {
+            margin: 3vh 0;
+            font-size: 1.2rem;
+        }
+
+        &-title {
+            font-family: var.$styleFont;
+            font-size: 7rem;
+            &--hollow {
+                color: transparent; 
+                -webkit-text-stroke: 1px white;
+                line-height: 3rem;
+               
+            }
+        }
+
+        &-description {
+            margin: 3vh 0 20vh 0;
+            font-size: 1rem;
+        }
+    }
+
+    &__nav {
+        margin: 0 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-logo {
+            width: 5.5rem;
+        }
+
+        &-button {
+            background-color: var(--primary-color); 
+            color: var(--secondary-color);
+
+            &--rsvp {
+                background: black;
+                color: white;
+                border: 1px solid #fff ; 
+                padding: 0.8rem  2rem; 
+                font-size: 1.3rem;
+                &:hover {
+                    background: #fff ; 
+                    color: #000; 
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// Intro 
+.intro {
+    padding: 3.6rem 0rem 6.25rem 6.8rem; 
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    
+
+    &__text {
+        margin: 10vh 30vw 0 5vw;
+
+        &-headline {
+            font-family: var.$extraBold;
+            font-size: 6.1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 6.8rem; /* 111.125% */
+            letter-spacing: -0.15rem;
+        }
+    }
+
+    &__overview {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5vw;
+
+        .intro__stats {
+            margin-top: 20vh;
+
+            &-title {
+                font-family: var.$mainFont;
+                font-size: 0.9rem; 
+                margin: 2vh 0;
+            }
+
+            &-value {
+                font-family: var.$mainFont;
+                font-size: 5.4rem; 
+                font-weight: 700;
+                line-height: 6.8rem; /* 119.697% */
+                letter-spacing: -0.15rem;
+            }
+        }
+
+        .intro__map {
+            width: 38%;
+        }
+    }
+}
+
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+
+    &__image {
+        width: 25vw;
+        display: block;
+
+        &--1 {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            transform: translateY(-10vh);
+        }
+
+        &--2 {
+            width: 20vw;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            transform: translateX(4vw);
+        }
+
+        &--3 {
+            width: 20vw;
+            grid-column: 3/4;
+            grid-row: 4/5;
+            transform: translateY(-20vh);
+            margin-left: auto;
+        }
+
+        &--4 {
+            grid-column: 1/2;
+            grid-row: 4/5;
+            transform: translateX(15vw);
+        }
+
+        &--5 {
+            grid-column: 3/4;
+            grid-row: 7/8;
+            transform: translate(-5vw, -5vh);
+        }
+
+        &--6 {
+            grid-column: 1/2;
+            grid-row: 8/9;
+        }
+
+        &--7 {
+            width: 30vw;
+            grid-column: 2/3;
+            grid-row: 9/10;
+            transform: translate(20vw, 15vh);
+        }
+    }
+
+    &__text {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        transform: translateY(-10vh);
+        width: 38vw;
+
+        &--1 {
+            h2 {
+                font-family: var.$extraBold;
+                font-size: 5.2rem;
+                margin-bottom: 2vh;
+                width: 90%;
+            }
+
+            p {
+                font-family: var.$mainFont;
+                font-size: 1rem;
+                line-height: 1.8rem;
+                width: 80%;
+            }
+        }
+    }
+
+    &__description {
+        &--2 {
+            grid-column: 2/3;
+            grid-row: 8/9;
+            transform: translateY(3vh);
+            font-size: 1rem;
+            line-height: 1.8rem;
+            margin-bottom: 2vh;
+            width: 80%;
+            color: #333;
+        }
+    }
+}
+
+
+.golden-bear {
+    &__content {
+        padding: 30vh 5vw 5vh 5vw;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+
+        display: flex;
+        justify-content: space-between;
+
+        .golden-bear__text {
+            width: 25vw;
+
+            .golden-bear__headline {
+                font-family: var.$extraBold; 
+                font-size: 5.2rem;
+                margin: 2vh 0;
+            }
+
+            .golden-bear__number {
+                font-family: var.$mainFont; 
+                font-size: 1.2rem;
+            }
+        }
+
+        .golden-bear__description {
+            width: 45vw;
+
+            .golden-bear__paragraph {
+                font-family: var.$mainFont; 
+                font-size: 1.8rem;
+                line-height: 1.6;
+                width:44rem;
+            }
+
+            .golden-bear__author {
+                font-family: var.$mainFont; 
+                font-weight: 800; 
+                margin-top: 1vh;
+                font-style: italic;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__images {
+        position: relative; 
+        padding-left: 5vw;
+        background-color: #000;
+    
+        .golden-bear__image {
+            display: block;
+            max-width: 100%;
+    
+            &--main {
+                width: 60%;
+                transform: translate(15vh, 19vh);
+            }
+    
+            &--secondary {
+                position: absolute; 
+                top: 50vh;
+                left: 60%;
+                width: 28%;
+                z-index: 1; 
+                
+            }
+        }
+    }
+}
+
+
+
