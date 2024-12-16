@@ -19,27 +19,18 @@ html{
 
 //!            KLASSEN              
 
-// Line Height Headlines
-.lineheightHeadlines {
-    line-height: 87px;
-}
 
-// RSVP Buttons
-.RSVPButton {
-    
+.button--rsvp {
+    background: black;
+    color: white;
+    border: 1px solid #fff ; 
+    padding: 0.8rem  2rem; 
+    font-size: 1.3rem;
+    &:hover {
+        background: #fff ; 
+        color: #000; 
+    }
 }
-
-// Hollow Font Style H1
-.hollowFont {
-    -webkit-text-stroke: 1px #fff ;
-    color: #000; 
-}
-
-// Line Height Text Main Image Section
-.lineheightText {
-    line-height: 35px;
-}
-
 
 
 
@@ -82,8 +73,7 @@ html{
 
     &__nav {
         margin: 0 5vw;
-        display: flex;
-        justify-content: space-between;
+        @include mixin.flex;
         align-items: center;
 
         &-logo {
@@ -94,17 +84,7 @@ html{
             background-color: var(--primary-color); 
             color: var(--secondary-color);
 
-            &--rsvp {
-                background: black;
-                color: white;
-                border: 1px solid #fff ; 
-                padding: 0.8rem  2rem; 
-                font-size: 1.3rem;
-                &:hover {
-                    background: #fff ; 
-                    color: #000; 
-                }
-            }
+            @mincloude mixin.button;
         }
     }
 }
@@ -133,8 +113,7 @@ html{
     }
 
     &__overview {
-        display: flex;
-        justify-content: space-between;
+        @include mixin.flex;
         margin-left: 5vw;
 
         .intro__stats {
@@ -261,9 +240,7 @@ html{
         background-color: var(--primary-color);
         color: var(--secondary-color);
 
-        display: flex;
-        justify-content: space-between;
-
+        @include mixin.flex;
         @include mixin.contentStyleGolden; 
 
     }
@@ -284,7 +261,7 @@ html{
     
             &--secondary {
                 position: absolute; 
-                top: 50vh;
+                top: 36vh;
                 left: 60%;
                 width: 30%;
                 z-index: 1; 
@@ -306,8 +283,8 @@ html{
         width: 30%;
         top: -12%;
         right: -8%;
-        z-index: -1; // Unter den anderen Elementen
-        animation: rotatingRing 10s infinite linear; // Rotation-Animation
+        z-index: -1; 
+        animation: rotatingRing 10s infinite linear; 
     }
 
     @keyframes rotatingRing {
@@ -320,14 +297,13 @@ html{
     }
 
     &__content {
-        display: flex;
-        justify-content: space-between;
         padding: 75vh 5vw 0 5vw;
 
+        @include mixin.flex;
         @include mixin.contentStylePoppy; 
     }
     &__images {
-        margin: 15vh 0;
+        margin: 10vh 0;
         position: relative; 
         padding-left: 5vw;
         
@@ -338,20 +314,91 @@ html{
             &--small {
                 width: 30%;
                 position: absolute; 
-                op: 43vh;
+                top: 18vh;
                 left: 10%;
-                width: 30%;
                 z-index: 1; 
             }
             
             &--large {
                 width: 60%;
-                transform: translate(28vw, -15vh);
+                transform: translate(28vw, 0vh);
             }
         }
     }
-    
-    
 }
 
+.footer {
+    
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    
 
+    // Footer Banner
+    &__banner {
+        overflow-x: hidden;
+        background-color: #fff;
+        color: #000;
+        width: 2500px;
+        transform: rotate(40deg) translateY(150%);
+        padding: 5vh 0;
+
+        &-animation {
+            font-family: var.$extraBold;
+            font-size: 2.5rem;
+            animation: footerBanner 3s linear infinite alternate;
+
+            span {
+                -webkit-text-stroke: 1px #000;
+                color: #fff;
+            }
+
+            @keyframes footerBanner {
+                from {
+                    transform: translateX(0%);
+                }
+                to {
+                    transform: translateX(40%);
+                }
+            }
+            
+        }
+        
+    }
+    // Footer Content Block
+    @include mixin.footerContent;
+
+
+    // Footer Navigation
+    &__nav { 
+        flex-wrap: wrap;
+        @include mixin.flex;
+        padding: 10vh 15vw 5vh 5vw;
+
+        // Social Media Section
+        &__social {
+            &-icons {
+                display: flex;
+                gap: 1rem;
+            }
+
+            &-icon {
+                width: 40px;
+                padding: 5px;
+            }
+
+            &-text,
+            &-year {
+                font-family: var.$mainFont;
+                margin: 2vh 0;
+            }
+        }
+
+        // Partner Logos
+        &__partners {
+            &-logo {
+                width: 7vw;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 @use "./variables.scss" as *;
 
+
 //Background Style Dark 
 
 
@@ -14,6 +15,50 @@
     font-family: $workSans-regular;
     font-size: 2rem; 
     margin-bottom: 2vh;
+}
+
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@mixin button{
+    .button--rsvp {
+        background: black;
+        color: white;
+        border: 1px solid #fff ; 
+        padding: 0.8rem  2rem; 
+        font-size: 1.3rem;
+        &:hover {
+            background: #fff ; 
+            color: #000; 
+        }
+    }
+}
+
+@mixin footerContent{
+    .footer__content {
+        padding: 10vh 5vw;
+        margin-bottom: 5vh;
+        width: 45vw;
+
+        .footer__heading {
+            font-family: $mainFont;
+            font-size: 1rem;
+            margin-bottom: 2vh;
+        }
+
+        .footer__description {
+            font-family: $mainFont;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 4vh;
+        }
+
+        @mincloude mixin.button;
+        
+    }
 }
 
 @mixin contentStyleGolden($textWidth: 25vw, $descWidth: 45vw) {
