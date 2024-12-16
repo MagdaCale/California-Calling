@@ -1,5 +1,6 @@
+@charset "UTF-8";
 /* ===== General Styles ===== */
-/* Import Variables */
+/* Import der benötigten SCSS-Dateien und Variablen */
 /* == Fonts == */
 @font-face {
   font-family: "LarishNeue";
@@ -23,15 +24,19 @@
   box-sizing: border-box;
 }
 
+/* Standard-Schriftart für das gesamte HTML-Dokument */
 html {
   font-family: "workSans-regular";
 }
 
+/* Farbvariablen als CSS Custom Properties */
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
 }
 
+/* ===== Button Styles ===== */
+/* Stil für RSVP-Button */
 .button--rsvp {
   background: black;
   color: white;
@@ -45,11 +50,13 @@ html {
 }
 
 /* ===== Header Styles ===== */
+/* Header-Bereich mit Hintergrundfarbe und Textfarbe */
 .header {
   height: 100vh;
   background-color: var(--primary-color);
   color: var(--secondary-color);
   text-align: center;
+  /* Header-Inhalt (Titel, Beschreibung, usw.) */
 }
 .header__line {
   width: 100vw;
@@ -90,10 +97,13 @@ html {
   @mincloude mixin.button;
 }
 
+/* ===== Intro Section ===== */
+/* Einleitungsbereich mit Text und Statistiken */
 .intro {
   padding: 3.6rem 0rem 6.25rem 6.8rem;
   background-color: var(--primary-color);
   color: var(--secondary-color);
+  /* Statistik-Übersicht */
 }
 .intro__text {
   margin: 10vh 30vw 0 5vw;
@@ -103,7 +113,7 @@ html {
   font-size: 6.1rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 6.8rem; /* 111.125% */
+  line-height: 6.8rem;
   letter-spacing: -0.15rem;
 }
 .intro__overview {
@@ -123,13 +133,15 @@ html {
   font-family: "workSans-regular";
   font-size: 5.4rem;
   font-weight: 700;
-  line-height: 6.8rem; /* 119.697% */
+  line-height: 6.8rem;
   letter-spacing: -0.15rem;
 }
 .intro__overview .intro__map {
   width: 38%;
 }
 
+/* ===== Image Gallery ===== */
+/* Bildergalerie mit Grid-Layout */
 .image-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -336,6 +348,8 @@ html {
   transform: translate(28vw, 0vh);
 }
 
+/* ===== Footer ===== */
+/* Footer mit Bannern und Navigation */
 .footer {
   overflow: hidden;
   background-color: var(--primary-color);

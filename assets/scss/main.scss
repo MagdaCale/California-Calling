@@ -1,25 +1,27 @@
 /* ===== General Styles ===== */
-/* Import Variables */
+/* Import der benötigten SCSS-Dateien und Variablen */
 @use "./_mixin.scss";
 @use "./variables" as var;
-
 
 * {
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
 }
+
+/* Standard-Schriftart für das gesamte HTML-Dokument */
 html{
     font-family: var.$mainFont;
 }
+
+/* Farbvariablen als CSS Custom Properties */
 :root {
     --primary-color: #000;
     --secondary-color: #fff;
 }
 
-//!            KLASSEN              
-
-
+/* ===== Button Styles ===== */
+/* Stil für RSVP-Button */
 .button--rsvp {
     background: black;
     color: white;
@@ -33,8 +35,8 @@ html{
 }
 
 
-
 /* ===== Header Styles ===== */
+/* Header-Bereich mit Hintergrundfarbe und Textfarbe */
 .header {
     height: 100vh;
     background-color: var(--primary-color); 
@@ -46,6 +48,7 @@ html{
         height: 25vh;
     }
 
+    /* Header-Inhalt (Titel, Beschreibung, usw.) */
     &__content {
         margin: 8vh 0;
 
@@ -61,7 +64,6 @@ html{
                 color: transparent; 
                 -webkit-text-stroke: 1px white;
                 line-height: 3rem;
-               
             }
         }
 
@@ -91,8 +93,8 @@ html{
 
 
 
-
-// Intro 
+/* ===== Intro Section ===== */
+/* Einleitungsbereich mit Text und Statistiken */
 .intro {
     padding: 3.6rem 0rem 6.25rem 6.8rem; 
     background-color: var(--primary-color);
@@ -107,11 +109,12 @@ html{
             font-size: 6.1rem;
             font-style: normal;
             font-weight: 700;
-            line-height: 6.8rem; /* 111.125% */
+            line-height: 6.8rem;
             letter-spacing: -0.15rem;
         }
     }
 
+     /* Statistik-Übersicht */
     &__overview {
         @include mixin.flex;
         margin-left: 5vw;
@@ -129,7 +132,7 @@ html{
                 font-family: var.$mainFont;
                 font-size: 5.4rem; 
                 font-weight: 700;
-                line-height: 6.8rem; /* 119.697% */
+                line-height: 6.8rem; 
                 letter-spacing: -0.15rem;
             }
         }
@@ -140,7 +143,8 @@ html{
     }
 }
 
-
+/* ===== Image Gallery ===== */
+/* Bildergalerie mit Grid-Layout */
 .image-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -272,8 +276,6 @@ html{
 }
 
 
-
-
 .poppy-bear {
     position: relative;
     overflow: hidden;
@@ -327,8 +329,9 @@ html{
     }
 }
 
+/* ===== Footer ===== */
+/* Footer mit Bannern und Navigation */
 .footer {
-    
     overflow: hidden;
     background-color: var(--primary-color);
     color: var(--secondary-color);

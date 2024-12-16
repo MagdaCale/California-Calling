@@ -1,9 +1,6 @@
 @use "./variables.scss" as *;
 
 
-//Background Style Dark 
-
-
 // H2 Font Style
 @mixin h2FontStyle {
     font-family: $workSans-regular;
@@ -127,11 +124,6 @@
         }
     }
 }
-
-
-
-
-
 
 // Media Queries 
 // H2 Font Style 
