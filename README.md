@@ -3,7 +3,6 @@
 ## Übersicht
 Das "California Calling" Projekt ist ein responsives und modernes Webdesign, das den von den Waldbränden in Kalifornien 2018 betroffenen Gemeinden gewidmet ist. Es kombiniert visuell ansprechendes Design mit semantischem HTML und SCSS, um Skalierbarkeit, Barrierefreiheit und Wartbarkeit sicherzustellen.
 
-![screenshot](img.png)
 
 ## Funktionen
 - **Semantisches HTML**: Verwendung von Elementen wie `<header>`, `<main>`, `<section>` und `<footer>` für verbesserte Zugänglichkeit und SEO.
@@ -45,6 +44,8 @@ index.html
 - Beinhaltet eine Navigationsleiste, ein Logo und einführende Inhalte.
 - Hervorgehobener Titel mit einem hohlen Effekt durch `-webkit-text-stroke`.
 
+![screenshot](start.png)
+
 ### Intro-Sektion
 - Text und Statistiken mit markanter Typografie.
 - Ein Bild einer Karte, das mit relativer Positionierung modern gestaltet ist.
@@ -62,35 +63,9 @@ index.html
 - Dynamische Banneranimation mit wechselnden Farben.
 - Social-Media-Icons und Partnerlogos.
 
-## Stil-Details
-### Farben
-```scss
-:root {
-  --primary-color: #000;
-  --secondary-color: #fff;
-}
-```
-### Schriften
-```scss
-$mainFont: 'Roboto', sans-serif;
-$styleFont: 'Playfair Display', serif;
-```
-### Mixins
-- Flexbox-Hilfsfunktion:
-```scss
-@mixin flex {
-  display: flex;
-  justify-content: space-between;
-}
-```
-- Button-Styling:
-```scss
-@mixin button {
-  padding: 0.8rem 2rem;
-  border: none;
-  cursor: pointer;
-}
-```
+![screenshot](footerbanner.png)
+
+
 
 ## Browserkompatibilität
 Das Projekt ist mit modernen Browsern kompatibel und nutzt progressive Verbesserungen sowie Fallback-Stile, um die Nutzbarkeit zu erhalten.
