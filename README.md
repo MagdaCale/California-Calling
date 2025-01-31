@@ -1,5 +1,6 @@
-# California Calling Projekt
-https://app.netlify.com/sites/california-calling-by-mags/overview
+
+<a href="[https://app.netlify.com/sites/california-calling-by-mags/overview](https://california-calling-by-mags.netlify.app/)
+"># California Calling Projekt</a>
 
 ## Übersicht
 Das "California Calling" Projekt ist ein responsives und modernes Webdesign, das den von den Waldbränden in Kalifornien 2018 betroffenen Gemeinden gewidmet ist. Es kombiniert visuell ansprechendes Design mit semantischem HTML und SCSS, um Skalierbarkeit, Barrierefreiheit und Wartbarkeit sicherzustellen.
